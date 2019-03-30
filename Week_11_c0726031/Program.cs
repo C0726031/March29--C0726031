@@ -34,16 +34,18 @@ namespace Week_11_c0726031
             public static async Task Download()
             {
                 HttpClient client = new HttpClient();
-                String data = await client.GetStringAsync("http://torontopubliclibrary.ca");
-                //  Console.WriteLine(data);
-                foreach (var i in data) ;
                 {
-                    WebPageContents.Add(i);
+                    String data = await client.GetStringAsync("http://torontopubliclibrary.ca");
+                    //  Console.WriteLine(data);
+                    foreach (var i in data) ;
+                    {
+                        WebPageContents.Add(i);
+                    }
                 }
             }
-        }
-    
+        
 
+    
 
 
 
